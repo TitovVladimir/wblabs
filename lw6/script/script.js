@@ -1,4 +1,4 @@
-class CM {
+class CoffeMachine {
   constructor() {
     this.moneyCash = 0;
     this.coffeeMenu =
@@ -24,7 +24,7 @@ class CM {
   }
 
   chooseCoffee(coffeeNum) {
-    if (this.validateNumber(coffeeNum) && this.validateMoney(coffeeNum - 1)) {
+    if (this.IsValidateNumber(coffeeNum) && this.IsValidateMoney(coffeeNum - 1)) {
       this.currentCoffeeNumber = coffeeNum;
       return true;
     } else
@@ -36,17 +36,17 @@ class CM {
     return sdacha;
   }
 
-    validateNumber(n) {
-      if ((n < 1) && (n >= this.coffeeMenu.id))
-        return false;
-      else
-        return true;
-    }
+  IsValidateNumber(n) {
+    if ((n < 1) && (n >= this.coffeeMenu.id))
+      return false;
+    else
+      return true;
+  }
 
-    validateMoney(coffeeNum) {
-      if (this.moneyCash < this.coffeeMenu[coffeeNum].price)
-        return false;
-      else
-        return true;
-    }
+  IsValidateMoney(coffeeNum) {
+    if (this.moneyCash < this.coffeeMenu[coffeeNum].price)
+      return false;
+    else
+      return true;
+  }
 }
