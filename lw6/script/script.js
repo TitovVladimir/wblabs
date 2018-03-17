@@ -31,9 +31,8 @@ class CoffeMachine {
       return false;
   }
 
-  getRemainCash(sdacha) {
-    sdacha = this.moneyCash - this.coffeeMenu[this.currentCoffeeNumber - 1].price;
-    return sdacha;
+  getRemainCash() {
+    return this.moneyCash - this.coffeeMenu[this.currentCoffeeNumber - 1].price;
   }
 
   IsValidateNumber(n) {
