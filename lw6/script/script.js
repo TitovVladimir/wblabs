@@ -35,14 +35,14 @@ class CoffeMachine {
     return this.moneyCash - this.coffeeMenu[this.currentCoffeeNumber - 1].price;
   }
 
-  CheckNumber(n) {
+  checkCoffeeNumber(n) {
     if ((n < 1) && (n >= this.coffeeMenu.id))
       return false;
     else
       return true;
   }
 
-  CheckMoney(coffeeNum) {
+  checkMoney(coffeeNum) {
     if (this.moneyCash < this.coffeeMenu[coffeeNum].price)
       return false;
     else
